@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.cellularfilling.Presentation.MainScreen
 import com.example.cellularfilling.ui.theme.CellularFillingTheme
 
 class MainActivity : ComponentActivity() {
