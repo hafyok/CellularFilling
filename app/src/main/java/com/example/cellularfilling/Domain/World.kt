@@ -3,14 +3,14 @@ package com.example.cellularfilling.Domain
 import com.example.cellularfilling.R
 import kotlin.random.Random
 
-class Word {
+class World {
     private val cells = mutableListOf<Cell>()
     private var livingStreak: Int = 0
     private var deadStreak: Int = 0
-    
-    fun addRandomCell(){
+
+    fun addRandomCell() {
         val newCell: Cell
-        if(Random.nextBoolean()){
+        if (Random.nextBoolean()) {
             newCell = LivingCell(R.drawable.living_cell, "Живая", "и шевелится!")
             livingStreak++
             deadStreak = 0
@@ -20,15 +20,16 @@ class Word {
             livingStreak = 0
         }
         cells.add(newCell)
-        //chechStreaks()
+        checkStreaks()
     }
 
-    private fun checkStreaks(){
-        if (livingStreak == 3){
+    private fun checkStreaks() {
+        if (livingStreak == 3) {
             cells.add(LivingCell(R.drawable.life_cell, "Жизнь", "Ку-ку!"))
             livingStreak = 0
-        } else if (deadStreak == 3){
-            //TODO() Добавить клетку смерти
+        } else if (deadStreak == 3) {
+            cells.add(DeadCell(R.drawable.death_cell, "Мёртвая", "Жизнь умирает"))
+            deadStreak = 0
         }
     }
 
