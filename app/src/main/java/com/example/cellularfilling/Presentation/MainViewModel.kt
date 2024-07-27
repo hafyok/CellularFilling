@@ -12,7 +12,6 @@ class MainViewModel : ViewModel() {
     private val world = World()
 
     private val _cells = MutableStateFlow<List<Cell>>(emptyList())
-    //val cells = mutableStateListOf<Cell>()
     val cells: StateFlow<List<Cell>> = _cells.asStateFlow()
 
     /*init {

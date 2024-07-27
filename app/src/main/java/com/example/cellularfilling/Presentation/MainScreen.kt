@@ -56,7 +56,6 @@ fun MainScreen(innerPadding: PaddingValues, viewModel: MainViewModel) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Используем Modifier.weight(1f) для заполнения оставшегося пространства
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
@@ -71,7 +70,6 @@ fun MainScreen(innerPadding: PaddingValues, viewModel: MainViewModel) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Кнопка размещается вне LazyColumn и всегда будет видимой
         Button(
             onClick = {
                 viewModel.addRandomCell()
